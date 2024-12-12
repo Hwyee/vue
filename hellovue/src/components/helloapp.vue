@@ -1,0 +1,34 @@
+<template>
+    <span id="testsp1">模版语法：{{ temMsg }}</span>
+    <br/>
+    <optionalTest></optionalTest>
+    <setupTest></setupTest>
+    <br>
+    <RefReactive></RefReactive>
+    <br>
+    <br>
+    <!-- 跳转并携带params参数（to的字符串写法） -->
+    <RouterLink :to="`/opt`">kkk</RouterLink>
+    <br>
+    <router-view></router-view>
+
+</template>
+<!-- /**
+通过组合式 API，我们可以使用导入的 API 函数来描述组件逻辑。在单文件组件中，
+组合式 API 通常会与 <script setup> 搭配使用。这个 setup attribute 是一个标识，
+告诉 Vue 需要在编译时进行一些处理，让我们可以更简洁地使用组合式 API。比如,<script setup> 中的导入和顶层变量/函数都能够在模板中直接使用。
+*/ -->
+<!-- 安装 vite-plugin-vue-setup-extend 可以使用name标签更改组件名字 -->
+<script setup language="ts" name="Hello">
+    import optionalTest from "./optionaltest.vue";
+    import setupTest from "./setupTest.vue";
+    import RefReactive from './refReactive.vue';
+
+    const temMsg = "模版语法";
+</script>
+
+<style>
+    #testsp1{
+        box-shadow: 0 0 10px;
+    }
+</style>
