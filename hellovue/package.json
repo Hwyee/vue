@@ -13,7 +13,9 @@
   "dependencies": {
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue": "^3.5.12",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "xgplayer": "^3.0.20",
+    "xgplayer-hls.js": "^3.0.20"
   },
   "devDependencies": {
     "@tsconfig/node20": "^20.1.4",
