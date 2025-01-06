@@ -1,16 +1,16 @@
 <template>
-    <!-- <span id="testsp1">模版语法：{{ temMsg }}</span>
+    <span id="testsp1">模版语法：{{ temMsg }}</span>
     <br/>
     <optionalTest></optionalTest>
     <setupTest></setupTest>
     <br>
     <RefReactive></RefReactive>
     <br>
-    <br> -->
+    <br> 
     <!-- 跳转并携带params参数（to的字符串写法） -->
-    <!-- <RouterLink :to="`/opt`">kkk</RouterLink>
+     <RouterLink :to="`/opt`">kkk</RouterLink>
     <br>
-    <router-view></router-view> -->
+    <router-view></router-view>
     <!-- <video width="640" height="480" controls autoplay
          src="http://localhost:8080/live/obs/hls.m3u8">
   </video> -->
@@ -18,6 +18,10 @@
 
     <div id="vs" ref="RefPlayer"></div>
     <DroneNestDialog @click="showDialog"></DroneNestDialog>
+
+  <RouterLink :to="`/obs`">obs</RouterLink>
+
+
 </template>
 <!-- /**
 通过组合式 API，我们可以使用导入的 API 函数来描述组件逻辑。在单文件组件中，
@@ -26,13 +30,13 @@
 */ -->
 <!-- 安装 vite-plugin-vue-setup-extend 可以使用name标签更改组件名字 -->
 <script setup language="ts" name="Hello">
-import {ref,onMounted} from 'vue';
 import optionalTest from "./optionaltest.vue";
 import setupTest from "./setupTest.vue";
 import RefReactive from './refReactive.vue';
 import DroneNestDialog from './dialog/airline.vue';
 
 const temMsg = "模版语法";
+
 
 import Player from 'xgplayer'
 import 'xgplayer/dist/index.min.css'
