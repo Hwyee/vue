@@ -14,9 +14,10 @@
     <!-- <video width="640" height="480" controls autoplay
          src="http://localhost:8080/live/obs/hls.m3u8">
   </video> -->
-    
+    <h1>OBS RTMP推流</h1>
 
     <div id="vs" ref="RefPlayer"></div>
+    <DroneNestDialog @click="showDialog"></DroneNestDialog>
 </template>
 <!-- /**
 通过组合式 API，我们可以使用导入的 API 函数来描述组件逻辑。在单文件组件中，
@@ -29,6 +30,7 @@ import {ref,onMounted} from 'vue';
 import optionalTest from "./optionaltest.vue";
 import setupTest from "./setupTest.vue";
 import RefReactive from './refReactive.vue';
+import DroneNestDialog from './dialog/airline.vue';
 
 const temMsg = "模版语法";
 
@@ -45,6 +47,9 @@ onMounted(()=>{
     // If use CDN loading,you can Get the plugin through window.HlsJsPlugin
 })
 })
+function showDialog(params) {
+    dialogVisible.value = true;
+}
 
 </script>
 
